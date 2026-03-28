@@ -2,17 +2,15 @@
 # ---! Bu dosya tüm model sınıflarını dışa aktarır
 
 # ---! DB Models
-from .db import *
+from .db.auth import Auth
 
-# ---! DTO Models
-from .dto import *
+# ---! DTO Models (Şimdilik boş)
+# from .dto import *
 
-# ---! Mapper Models
-from .mapper import *
+# ---! Mapper Models (Şimdilik boş)
+# from .mapper import *
 
 # ---! Tüm modelleri dışa aktarma listesi
 __all__ = [
-    *db.__all__,
-    *dto.__all__,
-    *mapper.__all__,
+    "Auth",
 ]

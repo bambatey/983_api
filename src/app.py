@@ -1,9 +1,17 @@
 from datetime import datetime, timezone
 import logging
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes import auth_routes
+from datalayer.database import create_db_and_tables
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Create tables on startup
+    await create_db_and_tables()
+    yield
 
 app = FastAPI(
     title="Personal Knowledge Server with Swagger",
@@ -17,6 +25,7 @@ app = FastAPI(
     openapi_url="/openapi.json",
     docs_url="/docs",
     redoc_url="/redoc",
+    lifespan=lifespan,
 )
 
 app.include_router(auth_routes.router)

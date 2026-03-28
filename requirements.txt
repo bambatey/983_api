@@ -2,3 +2,6 @@ fastapi
 datetime
 uvicorn
 sqlalchemy
+sqlmodel
+pydantic-settings
+asyncpg

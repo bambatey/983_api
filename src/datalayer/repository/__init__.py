@@ -1,37 +1,42 @@
 # ---! Repository Package
 # ---! Bu dosya tüm repository sınıflarını dışa aktarır
 
-# ---! Application Schema Models
-from .application_repository import (
-    ApplicationRepository,
-)
+from ._base_repository import BaseRepository
+from ._repository_abc import RepositoryABC
 
-from .team_repository import (
-    TeamRepository,
-)
+# ---! Application Schema Models (Dosyalar oluşturulduğunda açılacak)
+# from .application_repository import (
+#     ApplicationRepository,
+# )
 
-from .employee_repository import (
-    EmployeeRepository,
-)
+# from .team_repository import (
+#     TeamRepository,
+# )
 
-from .department_repository import (
-    DepartmentRepository,
-)
+# from .employee_repository import (
+#     EmployeeRepository,
+# )
 
-from .role_repository import (
-    RoleRepository,
-)
+# from .department_repository import (
+#     DepartmentRepository,
+# )
 
-from .manager_repository import (
-    ManagerRepository,
-)
+# from .role_repository import (
+#     RoleRepository,
+# )
+
+# from .manager_repository import (
+#     ManagerRepository,
+# )
 
 # ---! Tüm repository'leri dışa aktarma listesi
 __all__ = [
-    "ApplicationRepository",
-    "TeamRepository",
-    "EmployeeRepository",
-    "DepartmentRepository",
-    "RoleRepository",
-    "ManagerRepository",
+    "BaseRepository",
+    "RepositoryABC",
+    # "ApplicationRepository",
+    # "TeamRepository",
+    # "EmployeeRepository",
+    # "DepartmentRepository",
+    # "RoleRepository",
+    # "ManagerRepository",
 ]

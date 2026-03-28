@@ -12,4 +12,7 @@ DATABASE_USERNAME =
 DATABASE_PASSWORD = 
 
 - database bağlantısının yapıldığından emin ol.
+- kabul kriteri:
+iki end point de çalışır durumda biri db'ye yeni kayıt açabiliyor
+diğeri dbden kayıt okuyaibiliyor şeklind olmalıdır.
 
